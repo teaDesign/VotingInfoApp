@@ -1,28 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" ng-app="vipApp">
 <head>
-	<meta charset="utf-8">
-	<title>VIP Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>VIP Dashboard</title>
+    <meta name="description"
+          content="Partnering with election boards, campaign managers, user experience architects, graphic designers, and application developers to better serve voters.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/ico" href="assets/images/favicon.ico" />
+    <!-- jQuery lib -->
+    <script src="assets/js/lib/jquery-1.10.2/jquery-1.10.2.min.js"></script>
 
-    <!-- FontAwesome -->
-    <link href="assets/css/lib/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Angular lib -->
+    <script src="assets/js/lib/angular-1.2.1/angular.min.js"></script>
+    <script src="assets/js/lib/angular-1.2.1/angular-route.min.js"></script>
 
-	<!-- jQuery lib -->
-	<script src="assets/js/lib/jquery-1.10.2/jquery-1.10.2.min.js"></script>
-	
-	<!-- Bootstrap lib -->
-	<link href="assets/js/lib/bootstrap-3.0.2/css/bootstrap.min.css" rel="stylesheet">
-	<script src="assets/js/lib/bootstrap-3.0.2/js/bootstrap.min.js"></script>
-
-	<!-- Angular lib -->
-	<script src="assets/js/lib/angular-1.2.1/angular.min.js"></script>
-	<script src="assets/js/lib/angular-1.2.1/angular-route.min.js"></script>
-	
-	<!-- VIP App -->
-    <link href="assets/css/app/app.css" rel="stylesheet">
+    <!-- VIP App -->
+    <link href="assets/css/app.css" rel="stylesheet">
     <script src="assets/js/app/app.js"></script>
     <script src="assets/js/app/services/appService.js"></script>
 
@@ -42,25 +37,29 @@
     <script src="assets/js/app/controllers/profileController.js"></script>
     <script src="assets/js/app/services/profileService.js"></script>
 
-</head>
-<body>
+    <!-- Styleguide -->
+    <script src="assets/js/app/controllers/styleguideController.js"></script>
 
-    <!-- App Container -->
-	<div class="appLayout">
-        <div class="appContainer">
-            <!-- Header Navigation-->
-            <div class="header" ng-include src="'app/common/header.html'"></div>
+</head>
+<body role="application">
+
+    <!-- Header Navigation-->
+    <header role="banner" ng-include src="'app/common/header.html'"></header>
+
+    <div role="main">
+        <div class="wrapper">
+
             <!-- Page Header -->
-            <div class="pageHeaderContainer" ng-include src="'app/common/pageHeader.html'"></div>
+            <div ng-include src="'app/common/pageHeader.html'"></div>
 
             <!-- Current Page -->
-            <div class="main">
-                <div ng-view></div>
-            </div>
-        </div>
-        <!-- Footer -->
-        <div class="footerContainer" ng-include src="'app/common/footer.html'"></div>
-	</div>
+            <div class="main" ng-view></div>
+
+        </div><!-- / .wrapper -->
+    </div><!-- / main -->
+
+    <!-- Footer -->
+    <div class="footerContainer" ng-include src="'app/common/footer.html'"></div>
 
 </body>
 </html>

@@ -1,12 +1,15 @@
-<div class="appTitle">
-    <a href="#/home"><h1>VIP Dashboard</h1></a>
-</div>
-<div class="userLinksContainer">
-    <span class="userLink">{{user.name}}</span> |
-    <a class="userLink" href="#">Log Out</a>
-</div>
-<div class="navLinksContainer">
-    <a ng-class="{navLinkDisabled: pageHeader.section!='admin'}" class="navLink" href="#/admin"><i class="fa fa-cog"></i> Admin</a>
-    <a ng-class="{navLinkDisabled: pageHeader.section!='feeds'}" class="navLink" href="#/feeds"><i class="fa fa-bars"></i> Feeds</a>
-    <a ng-class="{navLinkDisabled: pageHeader.section!='profile'}" class="navLink" href="#/profile"><i class="fa fa-user"></i> Profile</a>
-</div>
+<div class="wrapper">
+    <a href="/" class="branding">VIP Dashboard</a>
+    <div class="auth">
+        <a ng-class="{navLinkDisabled: pageHeader.section!='profile'}" href="#/profile" class="user">{{user.name}}</a> | <a class="sign-out" href="#">Sign Out</a>
+    </div><!-- / .auth -->
+    <nav class="main-nav">
+        <ul>
+            <li><a ng-class="{active: pageHeader.section=='admin'}" href="#/admin">Admin</a></li>
+            <li><a ng-class="{active: pageHeader.section=='feeds'}" href="#/feeds">Feeds</a></li>
+            <li><a ng-class="{active: pageHeader.section=='profile'}" href="#/profile">Profile</a></li>
+        </ul>
+    </nav>
+</div><!-- / .wrapper -->
+
+
